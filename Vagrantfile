@@ -13,6 +13,6 @@ Vagrant.configure("2") do |config|
 
   config.vm.provision "ansible" do |ansible|
     ansible.playbook = "playbook.yml"
-    ansible.inventory_file = "inventory"
+    ansible.inventory_file = "vagrant_inventory"
   end
 end
