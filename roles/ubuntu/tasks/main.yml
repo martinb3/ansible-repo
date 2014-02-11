@@ -1,0 +1,6 @@
+---
+- name: update cache
+  apt: update_cache=yes
+
+- name: install vim
+  apt: pkg=vim

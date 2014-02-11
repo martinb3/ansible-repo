@@ -1,0 +1,11 @@
+---
+- name: Create groups based on distribution
+  group_by: key={{ ansible_distribution }}
+
+- user: name=martin comment="Martin Smith" 
+
+- name: Set up authorized_keys for the martin user
+  authorized_key: user=martin
+                  key="{{ item }}"
+  with_file:
+    - id_rsa_cloudhosts.pub

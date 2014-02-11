@@ -2,6 +2,16 @@
 - hosts: all
   user: vagrant
   sudo: yes
+  roles:
+    - common
   tasks:
     - name: install apache2
       action: apt pkg=apache2 state=latest
+
+- hosts: Ubuntu
+  roles:
+    - ubuntu
+
+- hosts: CentOS:RedHat
+  roles:
+    - redhat
