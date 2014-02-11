@@ -4,9 +4,9 @@
   sudo: yes
   roles:
     - common
-  tasks:
-    - name: install apache2
-      action: apt pkg=apache2 state=latest
+#  tasks:
+#    - name: install apache2
+#      action: apt pkg=apache2 state=latest
 
 - hosts: Ubuntu
   roles:

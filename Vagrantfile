@@ -7,7 +7,8 @@ Vagrant.configure("2") do |config|
   # please see the online documentation at vagrantup.com.
 
   # Every Vagrant virtual environment requires a box to build off of.
-  config.vm.box = "precise"
+  config.vm.box = "precise64"
+  #config.vm.box = "centos6-64"
 
   config.vm.network :private_network, ip: "192.168.111.222"
 
