@@ -1,0 +1,9 @@
+packages:
+  - vim
+  - iptables-persistent
+  - znc
+  - znc-dbg 
+  - znc-dev 
+  - znc-perl 
+  - znc-python 
+  - znc-tcl

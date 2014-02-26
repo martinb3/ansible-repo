@@ -1,0 +1,8 @@
+chat.rax.mbs3.org rax_region=IAD ansible_ssh_host=162.242.243.233 ansible_ssh_user=root ansible_ssh_private_key_file=~/.ssh/id_rsa_cloudhosts 
+#localhost ansible_connection=local
+#
+#[localhost]
+#localhost
+
+[chat]
+chat.rax.mbs3.org

@@ -1,17 +1,18 @@
 ---
-- hosts: all
-  user: vagrant
-  sudo: yes
-  roles:
-    - common
-#  tasks:
-#    - name: install apache2
-#      action: apt pkg=apache2 state=latest
+- name: create groups by distribution
+  hosts: all
+  gather_facts: True
+  tasks:
+    - group_by: key={{ ansible_distribution }}
 
-- hosts: Ubuntu
+- hosts: Debian:Ubuntu
+  gather_facts: False
   roles:
     - ubuntu
+    - common
 
 - hosts: CentOS:RedHat
+  gather_facts: False
   roles:
     - redhat
+    - common

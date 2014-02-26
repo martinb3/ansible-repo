@@ -1,6 +1,23 @@
 ---
+- name: Install minimal requirements for ansible
+  script: install_missing_package.sh {{item}}
+  register: res
+  changed_when: "res.stdout.startswith('Install')"
+  with_items:
+     - python
+     - python-apt
+     - python-pycurl
+     - aptitude
+
+- copy: src=sshd_config dest=/etc/ssh/sshd_config owner=root group=root mode=0644
+  notify: restart sshd
+
+- name: add znc ppa
+  apt_repository: repo='ppa:teward/znc'
+
 - name: update cache
   apt: update_cache=yes
 
-- name: install vim
-  apt: pkg=vim
+- name: install packages
+  apt: pkg={{ item }} update_cache=yes cache_valid_time=86400 state=present
+  with_items: packages
