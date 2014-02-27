@@ -8,11 +8,16 @@
 - hosts: Debian:Ubuntu
   gather_facts: False
   roles:
-    - ubuntu
-    - common
+    - base/ubuntu
+    - base/common
 
 - hosts: CentOS:RedHat
   gather_facts: False
   roles:
-    - redhat
-    - common
+    - base/redhat
+    - base/common
+
+- hosts: chat.rax.mbs3.org
+  gather_facts: False
+  roles:
+    - chat

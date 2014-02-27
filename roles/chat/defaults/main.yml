@@ -1,6 +1,4 @@
-packages:
-  - vim
-  - iptables-persistent
+chat_packages:
   - znc
   - znc-dbg 
   - znc-dev 

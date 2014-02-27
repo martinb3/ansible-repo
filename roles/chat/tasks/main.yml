@@ -1,0 +1,10 @@
+---
+- name: add znc ppa
+  apt_repository: repo='ppa:teward/znc'
+
+- name: update cache
+  apt: update_cache=yes
+
+- name: install chat related packages
+  apt: pkg={{ item }} update_cache=yes cache_valid_time=86400 state=present
+  with_items: chat_packages
