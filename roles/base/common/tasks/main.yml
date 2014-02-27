@@ -1,5 +1,5 @@
 ---
-- user: name=martin comment="Martin Smith" 
+- user: name=martin comment="Martin Smith" shell="/bin/bash"
 
 - name: Set up authorized_keys for the martin user
   authorized_key: user=martin
