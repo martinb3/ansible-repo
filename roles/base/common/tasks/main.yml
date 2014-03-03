@@ -6,3 +6,4 @@
                   key="{{ item }}"
   with_file:
     - id_rsa_cloudhosts.pub
+

@@ -1,3 +1,5 @@
 ---
 - name: install vim
   yum: name=vim-enhanced state=present
+
+- user: name=martin groups=admin

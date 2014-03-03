@@ -1,4 +1,4 @@
 packages:
   - vim
   - iptables-persistent
-
+  - curl
